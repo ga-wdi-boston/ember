@@ -1,53 +1,39 @@
-# Ember-cli-repo-template
+![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Ember Lesson
 
-## Prerequisites
+## Foundations (i.e. Pre-reqs)
+By this time, students have already learned:
 
-You will need the following things properly installed on your computer.
+- Foundation 1
+- Foundation 2
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Objectives
 
-## Installation
+By the end of this, students should be able to:
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+- Objective 1
+- Objective 2
+- Objective 3
 
-## Running / Development
+## Content
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Lesson material go here.
 
-### Code Generators
+Make sure to wrap section of code in appropriate markdown like `ls -al`, and denote the language as below for longer sections:
 
-Make use of the many generators for code, try `ember help generate` for more details
+```javascript
+function(){
+  var x = 2
+  var y = 3
+  return x + y
+};
+```
 
-### Running Tests
+## Additional Resources
 
-* `ember test`
-* `ember test --server`
+List additional related resources such as videos, blog posts and official documentation.
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+- Item 1
+- Item 2
+- Item 3
