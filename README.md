@@ -117,7 +117,7 @@ Now that you've installed `ember-cli`, setting up a new Ember project is easy. S
 
 As you might expect, the `app` directory is where we'll be writing most of our code.
 
-## Parts of An Ember Application
+## Parts of an Ember Application
 
 Don't worry about retaining all of this right now - the purpose of this section is just to give you a high-level overview over all of the different pieces of an Ember application. You should refer back to this material any time that you feel yourself losing sight of the big picture.
 
@@ -169,18 +169,18 @@ In addition to a View (+ Template), a Route also links to a type of object calle
 
 ### Ember 2.0 and Above
 
-All of the above was true for Ember v1. **_However, with Ember v2, a major change took place_** - specifically, a move made made to replace Controllers and Views as the abstractions for a particular UI element with a more flexible type of object called a **Component**. Like Views, Components have Templates associated with them, and they hold properties and methods related to the operation of that UI element; these Templates are stored in a different location than normal Templates.
+All of the above was true for Ember v1. **_However, with Ember v2, a major change began_** - specifically, a move was made to replace Controllers and Views as the abstractions for a particular UI element with a more flexible type of object called a **Component**. Like Views, Components have Templates associated with them, and they hold properties and methods related to the operation of that UI element; these Templates are stored in a different location than normal Templates.
 
 <!-- Add example of a Component from the demo app. -->
 
-A Component can be invoked from within a Template (either a normal one or a Component Template), and unlike a View, it does not have access to the entire scope of the Route; instead its scope is _explicitly defined_ at the location where the Component is invoked. This has the advantage of making Components very self-contained (and consequently, more interchangeable and re-usable).
+A Component can be invoked from within a Template (either a normal one or another Component's Template), and unlike a View, it does not have access to the entire scope of the Route; instead its scope is _explicitly defined_ at the location where the Component is invoked. This has the advantage of making Components very modular (and consequently, more interchangeable and re-usable).
 
 **Where things stand now:**
 The change-over from Controllers & Views to Components is in process but is not complete. Currently, both systems are supported. However, _Components are not yet 'routable'_ (though that change will probably be coming soon). The practical implications of this are that
 
-1. **If your UI element needs a Route associated with it**, use a Controller and a View (w. normal Template) to represent it.
+1. **If your UI element needs a Route associated with it**, use a **_Controller and a View_** (+ a normal Template) to represent it.
 
-2. **In all other cases**, represent your UI element with a Component (w. Component Template).
+2. **In all other cases**, represent your UI element with a **_Component_** (+ a Component Template).
 
 <!-- Cite example of using a Controller + a View vs using a Component -->
 
