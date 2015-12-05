@@ -4,15 +4,14 @@
 
 ## Lesson Details
 ### Foundations
-By this time, students have already learned how to:
+At this point, students have already learned how to:
 
 - Create and render Handlebars templates.
 - Use Handlebars helpers, both block and inline.
 - Use Handlebars partials.
 
 ### Objectives
-
-By the end of this, students should be able to:
+By the end of this lesson, students should be able to:
 
 - Explain what Ember is and what kinds of applications it's used for.
 - Download and install `ember-cli` and its dependencies.
@@ -20,7 +19,6 @@ By the end of this, students should be able to:
 - Explain how apps in Ember 1 differ from apps in Ember 2.
 
 ## Why Use Ember?
-
 **Ember** is a JavaScript framework for making richly interactive front-end applications. There are many front-end frameworks out there, but Ember is one of the four most prominent (the others being **Angular**, **Backbone**, and **React**).
 
 Why use a front-end framework instead of vanilla JavaScript, jQuery, and Handlebars/Moustache? Ultimately, it boils down to a couple of key features.
@@ -48,7 +46,6 @@ Ember, in particular, has several great things going for it.
 > How it does this will be briefly touched on in the lesson on `Ember.Object`; however, binding is one of the most complex topics in Ember, and we won't be diving into it too deeply this week. That said, we absolutely welcome you to explore this topic on your own time.
 
 ## Setting Up Ember
-
 To begin building applications in Ember, you'll need to do a little setup first.
 
 1. `ember-cli`
@@ -118,11 +115,9 @@ Now that you've installed `ember-cli`, setting up a new Ember project is easy. S
 As you might expect, the `app` directory is where we'll be writing most of our code.
 
 ## Parts of an Ember Application
-
 Don't worry about retaining all of this right now - the purpose of this section is just to give you a high-level overview over all of the different pieces of an Ember application. You should refer back to this material any time that you feel yourself losing sight of the big picture.
 
 ### Ember 1.0
-
 In the first version of Ember, Ember was built on an MVC structure. The key pieces of that structure were:
 
 * Views (`Ember.View`)
@@ -168,7 +163,6 @@ In addition to a View (+ Template), a Route also links to a type of object calle
 <!-- Add example of a Controller from the demo app. -->
 
 ### Ember 2.0 and Above
-
 All of the above was true for Ember v1. **_However, with Ember v2, a major change began_** - specifically, a move was made to replace Controllers and Views as the abstractions for a particular UI element with a more flexible type of object called a **Component**. Like Views, Components have Templates associated with them, and they hold properties and methods related to the operation of that UI element; these Templates are stored in a different location than normal Templates.
 
 <!-- Add example of a Component from the demo app. -->
@@ -189,7 +183,6 @@ At a high-level, here is a diagram illustrating how all of the different parts o
 <!-- Diagram of an Ember app's parts. -->
 
 ## Additional Resources
-
 - [`ember-cli` User Guide](http://ember-cli.com/user-guide/)
 - The [Official Ember API](http://emberjs.com/api/)
 - [Ember.js Guides](http://guides.emberjs.com/v2.2.0/)
