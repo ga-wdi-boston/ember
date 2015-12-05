@@ -4,11 +4,11 @@
 
 ## Lesson Details
 ### Foundations
-By this time, students have already learned:
+By this time, students have already learned how to:
 
-- How to create and render Handlebars templates.
-- How to use block- and inline- Handlebars helpers.
-- Using Handlebars partials.
+- Create and render Handlebars templates.
+- Use Handlebars helpers, both block and inline.
+- Use Handlebars partials.
 
 ### Objectives
 
