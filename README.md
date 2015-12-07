@@ -42,38 +42,41 @@ Ember, in particular, has several great things going for it.
 * Ember was primarily created by Yehuda Katz, one of the most significant contributors to Rails. Yehuda was also actively involved in the creation of jQuery, and is the creator of Handlebars. Consequently _Ember uses Handlebars (which you are already be familiar with) as its template engine for generating new HTML_.
 * Like Rails, Ember favors convention over configuration. Although it gives you less freedom than some other frameworks (e.g. Backbone), it also provides a lot of structure, which is helpful for beginners. This also makes it possible for Ember to easily generate files when they're needed.
 * Ember provides a neat feature called 'data binding'; what this means is that you can define certain values to be **_persistently related_** to other values, so that if one value gets updated, all values bound to it _automatically get updated_.
-> How it does this will be briefly touched on in the lesson on `Ember.Object`; however, binding is one of the most complex topics in Ember, and we won't be diving into it too deeply this week. That said, we absolutely welcome you to explore this topic on your own time.
+
+  *How it does this will be briefly touched on in the lesson on `Ember.Object`; however, binding is one of the most complex topics in Ember, and we won't be diving into it too deeply this week. That said, we absolutely welcome you to explore this topic on your own time.*
 
 ## Setting Up Ember
 To begin building applications in Ember, you'll need to do a little setup first.
 
-1. `ember-cli`
+1. `ember-cli` is a tool that will serve much the same purpose as `rails` did with Rails and `express` did with Express - spinning up new applications, generating files, running scripts, and performing tests. Install it by running
 
-  `ember-cli` is a tool that will serve much the same purpose as `rails` did with Rails and `express` did with Express - spinning up new applications, generating files, running scripts, and performing tests. Install it by running
-  ```bash
-  npm install -g ember-cli
-  ```
+    ```bash
+    npm install -g ember-cli
+    ```
 
-2. `watchman`
+1. `watchman` is a tool for watching files and recording when they change, allowing your Ember app to be updated _as you edit it_. We'll use Homebrew to download it:
 
-  `watchman` is a tool for watching files and recording when they change, allowing your Ember app to be updated _as you edit it_.
-  We'll use Homebrew to download it:
-  ```bash
-  brew update && brew install watchman
-  ```
-  > Linux users will unfortunately need to download and install `watchman` from the source code. Directions for that can be found [here](https://facebook.github.io/watchman/docs/install.html#installing-from-source).
+    ```bash
+    brew update && brew install watchman
+    ```
+
+    *Linux users will unfortunately need to download and install `watchman` from the source code. Directions for that can be found [here](https://facebook.github.io/watchman/docs/install.html#installing-from-source).*
 
 To verify that everything is working, run the command `ember -v`. You should see a response more or less like this.
+
 ```bash
 version: 1.13.13
-node: 5.0.0
+node: 4.2.2
 npm: 2.14.10
 os: darwin x64
 ```
+
 Ember 2.0 was released in August 2015, and `ember-cli` had been planning to release its v2.0 at the same time; however, the latest release of `ember-cli` has been delayed and (as of this writing) has not yet been released; as a result the current version does not reference the most up-to-date version of Ember. Fortunately, we can get around this by manually editing some files inside our Ember projects, as we will soon see.
 
 Now that you've installed `ember-cli`, setting up a new Ember project is easy. Simply navigate up to wherever you keep your projects and run the command `ember new <application name>` - it will generate a new application with the following structure:
-```bash
+
+
+```text
 .
 ├── app
 │   ├── app.js
@@ -114,9 +117,11 @@ Now that you've installed `ember-cli`, setting up a new Ember project is easy. S
 As you might expect, the `app` directory is where we'll be writing most of our code.
 
 ## Parts of an Ember Application
+
 Don't worry about retaining all of this right now - the purpose of this section is just to give you a high-level overview over all of the different pieces of an Ember application. You should refer back to this material any time that you feel yourself losing sight of the big picture.
 
 ### Ember 1.0
+
 In the first version of Ember, Ember was built on an MVC structure. The key pieces of that structure were:
 
 * Views (`Ember.View`)
@@ -162,6 +167,7 @@ In addition to a View (+ Template), a Route also links to a type of object calle
 <!-- Add example of a Controller from the demo app. -->
 
 ### Ember 2.0 and Above
+
 All of the above was true for Ember v1. **_However, with Ember v2, a major change began_** - specifically, a move was made to replace Controllers and Views as the abstractions for a particular UI element with a more flexible type of object called a **Component**. Like Views, Components have Templates associated with them, and they hold properties and methods related to the operation of that UI element; these Templates are stored in a different location than normal Templates.
 
 <!-- Add example of a Component from the demo app. -->
