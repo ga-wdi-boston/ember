@@ -75,7 +75,6 @@ Ember 2.0 was released in August 2015, and `ember-cli` had been planning to rele
 
 Now that you've installed `ember-cli`, setting up a new Ember project is easy. Simply navigate up to wherever you keep your projects and run the command `ember new <application name>` - it will generate a new application with the following structure:
 
-
 ```text
 .
 ├── app
@@ -114,7 +113,19 @@ Now that you've installed `ember-cli`, setting up a new Ember project is easy. S
 └── vendor
 ```
 
+Alternatively, you can run `ember init` if you've already created the application directory you'd like to use.
+
 As you might expect, the `app` directory is where we'll be writing most of our code.
+
+## Lab: Create a New Ember 1.13.13 Application
+
+Navigate to your projects directory, and type `ember new my-ember-app`. When the `ember-cli` process finishes, inspect your new application structure.
+
+Match the generated structure to the description of the layers found in the [overview](http://ember-cli.com/user-guide/#folder-layout) and [resolver documentation](http://ember-cli.com/user-guide/#using-modules).
+
+1. Where will you be working?
+1. Where is the default HTML layout defined?
+1. Where will you find the ready-to-deploy files?
 
 ## Parts of an Ember Application
 
