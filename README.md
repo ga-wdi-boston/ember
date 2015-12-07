@@ -2,21 +2,20 @@
 
 # Ember Overview
 
-## Lesson Details
-### Foundations
+## Foundations
 At this point, students have already learned how to:
 
 - Create and render Handlebars templates.
 - Use Handlebars helpers, both block and inline.
 - Use Handlebars partials.
 
-### Objectives
+## Objectives
 By the end of this lesson, students should be able to:
 
 - Explain what Ember is and what kinds of applications it's used for.
 - Download and install `ember-cli` and its dependencies.
-- Name and describe the different parts of an Ember application.
-- Explain how apps in Ember 1 differ from apps in Ember 2.
+- Name and describe the different layers of an Ember application.
+- Contrast the layers of Ember 1 and Ember 2 applications.
 
 ## Why Use Ember?
 **Ember** is a JavaScript framework for making richly interactive front-end applications. There are many front-end frameworks out there, but Ember is one of the four most prominent (the others being **Angular**, **Backbone**, and **React**).
