@@ -186,3 +186,9 @@ At a high-level, here is a diagram illustrating how all of the different parts o
 - [`ember-cli` User Guide](http://ember-cli.com/user-guide/)
 - The [Official Ember API](http://emberjs.com/api/)
 - [Ember.js Guides](http://guides.emberjs.com/v2.2.0/)
+
+[License](LICENSE)
+------------------
+
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
