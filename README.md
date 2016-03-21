@@ -1,103 +1,344 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Talk Template
+# Ember
 
-Use this template to structure your READMEs for talks. Remove text from this
-section, or use it to frame the talk you are giving. Good framing answers the
-question "Why am I learning this?".
-
-Be sure to include a recent [`LICENSE`](LICENSE) and Markdown linter
-configuration ([`.remarkrc`](.remarkrc)). Also, include an appropriate
-`.gitignore`; these are usually found in specific technology templates, for
-example [js-template](https://www.github.com/ga-wdi-boston/js-template).
+**Ember** is a JavaScript framework for making richly interactive front-end
+applications. There are many front-end frameworks out there, but Ember is one
+of the four most prominent (the others being **Angular**, **Backbone**, and
+**React**).
 
 ## Prerequisites
 
--   Topics with which developers should be familiar with.
--   Prerequisites are "just-in-time", so if I have a prerequisite that mentions
-    Sass, I would **not** need to include CSS as a prerequisite.
--   [Links to previous materials](https://www.github.com/ga-wdi-boston/example)
-    are often useful.
+-   [ga-wdi-boston/handlebars](https://github.com/ga-wdi-boston/handlebars)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Write objectives that focus on demonstrating knowledge.
--   Write learning objectives that begin with an [imperative
-    verb](https://en.wikipedia.org/wiki/Imperative_mood).
--   Avoid objectives that start with "Use" or "Understand".
--   Rewrite objecives that begin with "Use" by inverting sentence structure.
--   End each objective with a period.
--   Write objectives on the whiteboard so they can be referenced during a talk.
+-   Explain what Ember is and what kinds of applications it's used for.
+-   Download and install `ember-cli` and its dependencies.
+-   Create new applications with [ga-wdi-boston/ember-template](https://github.com/ga-wdi-boston/ember-template).
+-   Name and describe the different layers of an Ember application.
+-   Contrast the layers of Ember 1 and Ember 2 applications.
 
 ## Preparation
 
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-1.  Install dependencies with `npm install`.
+1.  Install dependencies with `npm install` and `bower install`.
 
-Better preparation instructions may be found as
-[snippets](https://github.com/ga-wdi-boston/instructors/tree/master/snippets).
+## Ember's Purpose
 
-It's a good idea to have students do these steps while you're writing objectives
-on the whiteboard.
+Why use a front-end framework instead of vanilla JavaScript, jQuery, and
+Handlebars/Moustache? Ultimately, it boils down to a couple of key features.
 
-## Leading Topic Heading
+-   **Routability**
 
-Here is where the talk begins. If you have not already included framing above,
-it's appropriate to put it here. Link to introductory articles or documentation.
-Motivate the next section.
+    In most of the websites you've been to, you can use your browser's "back"
+    button to go back to a page you just visited. However, as you may have
+    noticed, this is not possible in a single-page application with only JS and
+    jQuery - the URL of the page never changes! Most front-end frameworks
+    provide a way to change the URL of the page and tie it to the state of the
+    application, allowing for the use of the "back" button, bookmarking, and
+    many other features.
 
-Demos, exercises, and labs are labelled as such, followed by a colon and a
-description of the activity starting with an [imperative
-verb](https://en.wikipedia.org/wiki/Imperative_mood).
+-   **Less AJAX**
 
-## Demo: Write a Demo
+    Having to write lots of AJAX calls can be tedious. Most front-end frameworks
+    will abstract away the process of writing AJAX requests by creating a local
+    copy of a back-end resource and handling all of the AJAX necessary to
+    synchronize these two clones behind the scenes.
 
-Demos are demonstrations, and developers should give their full attention to
-them. It's a great time for them to take notes about important concepts before
-applying them in an exercise.
+-   **Responsiveness**
 
-Demos correspond to the "I do" portion of scaffolding from consultant trainging.
+    Because of the above, your back-end resources effectively get 'cached' on
+    the front-end, so the front-end doesn't need to make as many requests in
+    order to have the data it needs. As a result, displaying resource data is
+    faster, and when data gets updated locally, it doesn't need to wait until
+    it's synched up with the back-end before showing the updated data.
 
-## Exercise: Write an Exercise
+Naturally, no tool is the right tool for every job. But applications in which
+the aforementioned features are important will probably benefit from using a
+framework. Additionally, of course, frameworks usually make it easier for the
+developer by providing libraries and generators for common tasks.
 
-During exercises, developers should apply concepts covered in the previous demo.
-This is their first chance to generalize concepts introduced. Exercises should
-be very focused, and flow natural into a lab.
+Ember, in particular, has several great things going for it.
 
-Exercises correspond to the "We do" portion of scaffolding from consultant
-trainging.
+Of all of the more prominent frameworks, _Ember is the oldest and most mature_.
 
-## Lab: Write a Lab
+Ember was primarily created by Yehuda Katz, one of the most significant
+contributors to Rails. Yehuda was also actively involved in the creation of
+jQuery, and is the creator of Handlebars. Consequently _Ember uses Handlebars
+(which you are already be familiar with) as its template engine for generating
+new HTML_.
 
-During labs, developers get to demonstrate their understanding of concepts from
-demos and applied knowledge from exercises. Labs are an opportunity for
-developers to build confidence, and also serve as a diagnostic tool for
-consultants to evaluate developer understanding.
+Like Rails, Ember favors convention over configuration. Although it gives you
+less freedom than some other frameworks (e.g. Backbone), it also provides a lot
+of structure, which is helpful for beginners. This also makes it possible for
+Ember to easily generate files when they're needed.
 
-Labs should be timed explicitly using a timer. When estimating the time it will
-take to complete a lab, it is better to overestimate. During labs, consultants
-should circle the room and interact with developers, noting patterns and
-prompting with hints on how to complete the lab. If developers end early, a
-consultant may stop the lab timer. If developers do not finish in time, a
-consultant may give more time at her discretion based on current talk pace, the
-current estimate for the talk, and the importance of completing the lab while
-consultant support is available.
+Ember provides a neat feature called 'data binding'; what this means is that you
+can define certain values to be _persistently related_ to other values, so that
+if one value gets updated, all values bound to it _automatically get updated_.
 
-Labs correspond to the "You do" portion of scaffolding from consultant
-trainging.
+How it does this will be briefly touched on in
+[ga-wdi-boston/ember-object](https://github.com/ga-wdi-boston/ember-object);
+however, binding is one of the most complex topics in Ember, and we won't be
+diving into it too deeply this week. That said, we absolutely welcome you to
+explore this topic on your own time.
+
+## Install `ember-cli` and Dependencies
+
+To begin building applications in Ember, you'll need to do a little setup first.
+
+`ember-cli` is a tool that will serve much the same purpose as `rails` did with
+Rails and `express` did with Express - spinning up new applications, generating
+files, running scripts, and performing tests. Install it by running
+
+```bash
+npm install -g ember-cli
+```
+
+`watchman` is a tool for watching files and recording when they change, allowing
+your Ember app to be updated _as you edit it_. We'll use Homebrew to download
+it:
+
+```bash
+brew update && brew install watchman
+```
+
+Linux users will unfortunately need to download and install `watchman` from the
+source code. Directions for that can be found [in the Watchman
+docs](https://facebook.github.io/watchman/docs/install.html#installing-from-source).
+
+To verify that everything is working, run the command `ember -v`. You should see
+a response more or less like this.
+
+```bash
+version: 2.4.2
+node: 4.2.2
+os: darwin x64
+```
+
+### Gotchas
+
+> Note, there exists a similarly named npm package (watchman) which is not the
+> intended installation. If you have this package installed you may see the
+> following warning:
+>
+> ```bash
+> invalid watchman found, version: [2.9.8] did not satisfy [^3.0.0], falling back to NodeWatcher
+> ```
+>
+>  — <http://ember-cli.com/user-guide/#watchman>
+
+> Lastly, when Watchman is not installed, a notice is displayed when invoking
+> various commands. You can safely ignore this message:
+>
+> ```bash
+> Could not find watchman, falling back to NodeWatcher for file system events
+> ```
+>
+>  — <http://ember-cli.com/user-guide/#watchman>
+
+You may receive `watchman` errors if your Ember applications become large
+enough. This will happen sooner on OS X than on linux. It's a great idea to go
+ahead and take care of this. See [Linux inotify
+limits](https://facebook.github.io/watchman/docs/install.html#linux-inotify-limits)
+and [Mac OS X File Descriptor
+Limits](https://facebook.github.io/watchman/docs/install.html#max-os-file-descriptor-limits).
+
+## Starting a New Ember Application
+
+We won't be using `ember new` to generate new Ember applications. We have
+several custom configurations and tasks available in [ga-wdi-boston/ember-template](https://github.com/ga-wdi-boston/ember-template),
+so you'll follow the installation instructions there to start new applications.
+
+A new, up-to-date Ember application has been provided for you in this
+repository.
+
+## Ember Application Structure
+
+If we run `tree`, we see the basic structure of a new Ember application. An
+abbreviated version:
+
+```bash
+.
+├── README.md
+├── app
+│   ├── app.js
+│   ├── application
+│   │   ├── adapter.js
+│   │   ├── serializer.js
+│   │   └── template.hbs
+│   ├── components
+│   ├── helpers
+│   ├── index.html
+│   ├── resolver.js
+│   ├── router.js
+│   └── styles
+│       └── app.scss
+├── bower.json
+├── config
+│   └── environment.js
+├── ember-cli-build.js
+├── package.json
+├── public
+│   ├── crossdomain.xml
+│   ├── favicon.ico
+│   └── robots.txt
+├── testem.js
+├── tests
+└── vendor
+```
+
+### Lab: Become Familiar with Ember File Structure
+
+Match the generated structure to the description of the layers found in the
+[overview](http://ember-cli.com/user-guide/#folder-layout) and [resolver
+documentation](http://ember-cli.com/user-guide/#using-modules).
+
+1.  Where will you be working?
+1.  Where is the default HTML layout defined?
+1.  Where will you find the ready-to-deploy files?
+
+As with Rails, naming conventions are important. File names are linked to
+variable references, and if either is misspelled, you might experience
+frustration. Familiarize yourself with the [naming
+conventions](http://ember-cli.com/user-guide/#naming-conventions).
+
+## Layers of an Ember Application
+
+Don't worry about retaining all of this right now - the purpose of this section
+is just to give you a high-level overview over all of the different pieces of an
+Ember application. You should refer back to this material any time that you feel
+yourself losing sight of the big picture.
+
+### Ember 1.0
+
+In the first version of Ember, Ember was built on an MVC structure. It is
+important to understand prior Ember conventions since some documentation and
+tutorials you find will use the older structure. We see how the layers changed
+between Ember 1.0 and Ember 2.0 shortly.
+
+The key pieces of the older structure were:
+
+-   Views (`Ember.View`)
+-   Templates
+-   The Ember Router (`Ember.Router`)
+-   Routes (`Ember.Route`)
+-   Models (`DS.Model`)
+-   Adapters (`DS.RESTAdapter`)
+-   Controllers (`Ember.Controller`)
+
+Each of these parts had a different responsibility. **Views** were the heart of
+Ember's core functionality; each View represented a visible UI element in the
+page, and contained properties and methods (including event handlers) that
+related to how that UI element looked and behaved.
+
+<!-- Add example of a View from the demo app. -->
+
+Views could be nested inside each other, in a tree-like structure.
+
+<!-- Add diagram of nested Views on the page mapping to a text tree of View
+names. -->
+
+The HTML content for a View was provided by a corresponding **Template**. Each
+Template was written in Handlebars, and could access and manipulate properties
+in the View. In-built Handlebars helpers such as `{{#if}}` and `{{#each}}` were
+also available.
+
+<!-- Add example of a Template, ideally one referencing a property in the
+View. -->
+
+Of course, an application would typically need to show many different templates.
+The system for determining which UI elements to show is called _UI Routing_, and
+in Ember that job is carried out by the **Router**.
+
+<!-- Add code snippet of the demo app's router. -->
+
+In particular, what the Router does is associate a URL path with a particular
+View and Template, through an intermediary object called a **Route** object.
+**Not every View needs to be 'routable', but _every_ Route must refer to a
+View**.
+
+A Route has three jobs: (1) parsing information contained in the URL, such as an
+ID or a query string, (2) linking the Router to a particular View/Template
+(among other things), and (3) loading the UI element's data via a method called
+`model`.
+
+<!-- Add example of a Route from the demo app. -->
+
+This data can be hard-coded, but usually it is pulled from the app's central
+data store (provided by library called `ember-data`) which is accessible to each
+Route from that Route's `store` property. The resources available from that
+store are defined by **Models**, which essentially served as resource-specific
+schemas.
+
+<!-- Add example of a Model from the demo app. -->
+
+Each resource can have its data stored in a different type of data storage
+system (e.g. `localstorage`, test fixtures, a back-end API), and the details of
+that resource-storage relationship are handled by a type of object called an
+**Adapter**.
+
+<!-- Add example of an Adapter from the demo app. -->
+
+In addition to a View (+ Template), a Route also links to a type of object
+called a **Controller**. The purpose of a Controller was to house all of the
+'business logic' of our UI element - basically, any sort of CRUD actions that
+the UI element would need to perform on its data (which, again, was provided by
+the Route). A Controller would also house any additional helper properties or
+methods related to data manipulation.
+
+<!-- Add example of a Controller from the demo app. -->
+
+### Ember 2.0
+
+All of the above was true for Ember v1. **_However, with Ember v2, a major
+change began_** - specifically, a move was made to replace Controllers and Views
+as the abstractions for a particular UI element with a more flexible type of
+object called a **Component**. Like Views, Components have Templates associated
+with them, and they hold properties and methods related to the operation of that
+UI element; these Templates are stored in a different location than normal
+Templates.
+
+<!-- Add example of a Component from the demo app. -->
+
+A Component can be invoked from within a Template (either a normal one or
+another Component's Template), and unlike a View, it does not have access to the
+entire scope of the Route; instead its scope is _explicitly defined_ at the
+location where the Component is invoked. This has the advantage of making
+Components very modular (and consequently, more interchangeable and re-usable).
+
+The change-over from Controllers and Views to Components is in process but is
+not complete. Both Controllers and Views are deprecated, but _Components are not
+yet 'routable'_ (though that change will probably be coming soon). The
+work-around is straight-forward:
+
+1.  Represent all your UI elements with a Component.
+1.  **If your view state needs a Route associated with it**, load it in a
+    normally-named template. You should **not** need to generate a View or
+    Controller, since your code will either go in a Route or the Component
+    itself.
+
+This newer structure is now [much
+simpler](https://guides.emberjs.com/v2.4.0/getting-started/core-concepts/).
+
+## Code-Along: Start an Application with Generators
+
+We'll be working with a list-making app, Listr, throughout our journey with
+Ember. We have a client [client](https://github.com/ga-wdi-boston/listr-client)
+and [api](https://github.com/ga-wdi-boston/listr-api) for demostration purposes.
+
+Let's try using a few generators and a little custom code to begin building our
+own versions of Listr.
 
 ## Additional Resources
 
--   Any useful links should be included in the talk material where the link is
-    first referenced.
--   Additional links for further study or exploration are appropriate in this
-    section.
--   Links to important parts of documentation not covered during the talk, or
-    tools tangentially used but not part of the focus of the talk, are also
-    appropriate.
+-   [`ember-cli` User Guide](http://ember-cli.com/user-guide/)
+-   The [Official Ember API](http://emberjs.com/api/)
+-   [Ember.js Guides](http://guides.emberjs.com/)
 
 ## [License](LICENSE)
 
