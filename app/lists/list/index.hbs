@@ -1,0 +1,7 @@
+<h2>My Lists</h2>
+
+{{#each model as |list|}}
+  <h3>{{#link-to 'lists.list' list}}{{list.title}}{{/link-to}}</h3>
+{{/each}}
+
+{{outlet}}
