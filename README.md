@@ -95,8 +95,14 @@ To begin building applications in Ember, you'll need to do a little setup first.
 Rails and `express` did with Express - spinning up new applications, generating
 files, running scripts, and performing tests. Install it by running
 
-```bash
+```sh
 npm install -g ember-cli
+```
+
+We also need `bower`. If you aren't sure whether it's installed, or to update:
+
+```sh
+npm install -g bower
 ```
 
 `watchman` is a tool for watching files and recording when they change, allowing
