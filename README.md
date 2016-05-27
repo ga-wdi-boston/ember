@@ -32,7 +32,7 @@ By the end of this, developers should be able to:
 Why use a front-end framework instead of vanilla JavaScript, jQuery, and
 Handlebars/Moustache? Ultimately, it boils down to a couple of key features.
 
--   **Routability**
+-   Routability
 
     In most of the websites you've been to, you can use your browser's "back"
     button to go back to a page you just visited. However, as you may have
@@ -42,14 +42,14 @@ Handlebars/Moustache? Ultimately, it boils down to a couple of key features.
     application, allowing for the use of the "back" button, bookmarking, and
     many other features.
 
--   **Less AJAX**
+-   Less AJAX
 
     Having to write lots of AJAX calls can be tedious. Most front-end frameworks
     will abstract away the process of writing AJAX requests by creating a local
     copy of a back-end resource and handling all of the AJAX necessary to
     synchronize these two clones behind the scenes.
 
--   **Responsiveness**
+-   Responsiveness
 
     Because of the above, your back-end resources effectively get 'cached' on
     the front-end, so the front-end doesn't need to make as many requests in
