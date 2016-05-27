@@ -1,7 +1,7 @@
 {
-  "name": "ember-template",
+  "name": "ga-wdi-boston.ember-template",
   "version": "0.0.0",
-  "description": "Small description for ember-template goes here",
+  "description": "Small description for ga-wdi-boston.ember-template goes here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -22,7 +22,7 @@
     "active-model-adapter": "2.1.1",
     "broccoli-asset-rev": "^2.2.0",
     "ember-ajax": "0.7.1",
-    "ember-cli": "2.4.2",
+    "ember-cli": "^2.4.2",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-autoprefixer": "0.6.0",
     "ember-cli-babel": "^5.1.5",
@@ -35,7 +35,7 @@
     "ember-cli-sass": "5.3.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.4.0",
+    "ember-data": "^2.5.3",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
