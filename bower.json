@@ -1,5 +1,5 @@
 {
-  "name": "ga-wdi-boston.ember-template",
+  "name": "ember-overview",
   "dependencies": {
     "ember": "v2.5.1",
     "ember-cli-shims": "0.1.0",

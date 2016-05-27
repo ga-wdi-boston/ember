@@ -1,7 +1,7 @@
 {
-  "name": "ga-wdi-boston.ember-template",
+  "name": "ember-overview",
   "version": "0.0.0",
-  "description": "Small description for ga-wdi-boston.ember-template goes here",
+  "description": "Small description for ember-overview goes here",
   "private": true,
   "directories": {
     "doc": "doc",
