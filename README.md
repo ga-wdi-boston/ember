@@ -168,8 +168,15 @@ repository.
 
 ## Ember Application Structure
 
-If we run `tree`, we see the basic structure of a new Ember application. An
-abbreviated version:
+If you'd like to see the basic structure of a new Ember application, run the
+below command:
+
+```bash
+brew install tree
+```
+
+If you then run `tree`, we see the basic structure of a new Ember application.
+An abbreviated version:
 
 ```bash
 .
