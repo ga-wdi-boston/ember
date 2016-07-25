@@ -350,6 +350,10 @@ and [api](https://github.com/ga-wdi-boston/listr-api) for demostration purposes.
 Let's try using a few generators and a little custom code to begin building our
 own versions of Listr.
 
+```bash
+ember generate route lists
+```
+
 ## Additional Resources
 
 -   [`ember-cli` User Guide](http://ember-cli.com/user-guide/)
