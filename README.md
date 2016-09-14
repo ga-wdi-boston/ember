@@ -181,31 +181,31 @@ An abbreviated version:
 ```bash
 .
 ├── README.md
-├── app
+├── app/
 │   ├── app.js
-│   ├── application
+│   ├── application/
 │   │   ├── adapter.js
 │   │   ├── serializer.js
 │   │   └── template.hbs
-│   ├── components
-│   ├── helpers
+│   ├── components/
+│   ├── helpers/
 │   ├── index.html
 │   ├── resolver.js
 │   ├── router.js
-│   └── styles
+│   └── styles/
 │       └── app.scss
 ├── bower.json
-├── config
+├── config/
 │   └── environment.js
 ├── ember-cli-build.js
 ├── package.json
-├── public
+├── public/
 │   ├── crossdomain.xml
 │   ├── favicon.ico
 │   └── robots.txt
 ├── testem.js
-├── tests
-└── vendor
+├── tests/
+└── vendor/
 ```
 
 ### Lab: Become Familiar with Ember File Structure
@@ -214,7 +214,7 @@ Match the generated structure to the description of the layers found in the
 [overview](http://ember-cli.com/user-guide/#folder-layout) and [resolver
 documentation](http://ember-cli.com/user-guide/#using-modules).
 
-1.  Where will you be working?
+1.  In which folder will mainly you be working?
 1.  Where is the default HTML layout defined?
 1.  Where will you find the ready-to-deploy files?
 
