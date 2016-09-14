@@ -223,6 +223,10 @@ variable references, and if either is misspelled, you might experience
 frustration. Familiarize yourself with the [naming
 conventions](http://ember-cli.com/user-guide/#naming-conventions).
 
+For reference:
+
+![Ember Core Concepts](https://guides.emberjs.com/v2.4.0/images/ember-core-concepts/ember-core-concepts.png)
+
 ## Layers of an Ember Application
 
 Don't worry about retaining all of this right now - the purpose of this section
