@@ -122,7 +122,7 @@ a response more or less like this.
 
 ```bash
 version: 2.4.2
-node: 4.0.0
+node: 4.4.0
 os: darwin x64
 ```
 
