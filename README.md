@@ -147,14 +147,12 @@ os: darwin x64
 >
 >  — <http://ember-cli.com/user-guide/#watchman>
 
+####Linux
 You may receive `watchman` errors if your Ember applications become large
 enough. This will happen sooner on OS X than on linux. It's a great idea to go
 ahead and take care of this. See [Linux inotify
-limits](https://facebook.github.io/watchman/docs/install.html#linux-inotify-limits)
-and [Mac OS X File Descriptor
-Limits](https://facebook.github.io/watchman/docs/install.html#max-os-file-descriptor-limits).
-Instructions for adjusting these limits is included for Mac OS X. For Linux, see
-[this doc from
+limits](https://facebook.github.io/watchman/docs/install.html#linux-inotify-limits).
+See [this doc from
 guard](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers).
 
 ## Starting a New Ember Application
