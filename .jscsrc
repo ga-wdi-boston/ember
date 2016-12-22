@@ -2,7 +2,7 @@
   "preset": "airbnb",
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowSpaceAfterObjectKeys": {
-    "allExcept": ["method"] 
+    "allExcept": ["method"]
   },
   "requirePaddingNewLinesAfterBlocks": {
     "allExcept": ["inCallExpressions", "inArrayExpressions", "inProperties"]
