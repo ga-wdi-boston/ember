@@ -121,8 +121,8 @@ To verify that everything is working, run the command `ember -v`. You should see
 a response more or less like this.
 
 ```bash
-version: 2.4.2
-node: 4.4.0
+version: 2.10.0
+node: 4.6.0
 os: darwin x64
 ```
 
@@ -223,7 +223,7 @@ conventions](http://ember-cli.com/user-guide/#naming-conventions).
 
 For reference:
 
-![Ember Core Concepts](https://guides.emberjs.com/v2.4.0/images/ember-core-concepts/ember-core-concepts.png)
+![Ember Core Concepts](https://guides.emberjs.com/v2.10.0/images/ember-core-concepts/ember-core-concepts.png)
 
 ## Layers of an Ember Application
 
@@ -231,6 +231,75 @@ Don't worry about retaining all of this right now - the purpose of this section
 is just to give you a high-level overview over all of the different pieces of an
 Ember application. You should refer back to this material any time that you feel
 yourself losing sight of the big picture.
+
+### Ember 2.0
+
+<!-- Add example of a Template -->
+
+Of course, an application would typically need to show many different templates.
+The system for determining which UI elements to show is called _UI Routing_, and
+in Ember that job is carried out by the **Router**.
+
+
+<!-- Add code snippet of the demo app's router. -->
+
+In particular, what the Router does is associate a URL path with a particular
+View and Template, through an intermediary object called a **Route** object.
+**Not every View needs to be 'routable', but _every_ Route must refer to a
+View**.
+
+A Route has three jobs: (1) parsing information contained in the URL, such as an
+ID or a query string, (2) linking the Router to a particular View/Template
+(among other things), and (3) loading the UI element's data via a method called
+`model`.
+
+<!-- Add example of a Route from the demo app. -->
+
+This data can be hard-coded, but usually it is pulled from the app's central
+data store (provided by library called `ember-data`) which is accessible to each
+Route from that Route's `store` property. The resources available from that
+store are defined by **Models**, which essentially served as resource-specific
+schemas.
+
+<!-- Add example of a Model from the demo app. -->
+
+Each resource can have its data stored in a different type of data storage
+system (e.g. `localstorage`, test fixtures, a back-end API), and the details of
+that resource-storage relationship are handled by a type of object called an
+**Adapter**.
+
+<!-- Add example of an Adapter from the demo app. -->
+
+All of the above was true for Ember v1. **_However, with Ember v2, a major
+change began_** - specifically, a move was made to replace Controllers and Views
+as the abstractions for a particular UI element with a more flexible type of
+object called a **Component**. Like Views, Components have Templates associated
+with them, and they hold properties and methods related to the operation of that
+UI element; these Templates are stored in a different location than normal
+Templates.
+
+<!-- Add example of a Component from the demo app. -->
+
+A Component can be invoked from within a Template (either a normal one or
+another Component's Template), and unlike a View, it does not have access to the
+entire scope of the Route; instead its scope is _explicitly defined_ at the
+location where the Component is invoked. This has the advantage of making
+Components very modular (and consequently, more interchangeable and re-usable).
+
+The change-over from Controllers and Views to Components is in process but is
+not complete. Both Controllers and Views are deprecated, but _Components are not
+yet 'routable'_ (though that change will probably be coming soon). The
+work-around is straight-forward:
+
+1.  Represent all your UI elements with a Component.
+1.  **If your view state needs a Route associated with it**, load it in a
+    normally-named template. You should **not** need to generate a View or
+    Controller, since your code will either go in a Route or the Component
+    itself.
+
+This newer structure is now [much
+simpler](https://guides.emberjs.com/v2.10.0/getting-started/core-concepts/).
+
 
 ### Ember 1.0
 
@@ -266,41 +335,6 @@ Template was written in Handlebars, and could access and manipulate properties
 in the View. In-built Handlebars helpers such as `{{#if}}` and `{{#each}}` were
 also available.
 
-<!-- Add example of a Template, ideally one referencing a property in the
-View. -->
-
-Of course, an application would typically need to show many different templates.
-The system for determining which UI elements to show is called _UI Routing_, and
-in Ember that job is carried out by the **Router**.
-
-<!-- Add code snippet of the demo app's router. -->
-
-In particular, what the Router does is associate a URL path with a particular
-View and Template, through an intermediary object called a **Route** object.
-**Not every View needs to be 'routable', but _every_ Route must refer to a
-View**.
-
-A Route has three jobs: (1) parsing information contained in the URL, such as an
-ID or a query string, (2) linking the Router to a particular View/Template
-(among other things), and (3) loading the UI element's data via a method called
-`model`.
-
-<!-- Add example of a Route from the demo app. -->
-
-This data can be hard-coded, but usually it is pulled from the app's central
-data store (provided by library called `ember-data`) which is accessible to each
-Route from that Route's `store` property. The resources available from that
-store are defined by **Models**, which essentially served as resource-specific
-schemas.
-
-<!-- Add example of a Model from the demo app. -->
-
-Each resource can have its data stored in a different type of data storage
-system (e.g. `localstorage`, test fixtures, a back-end API), and the details of
-that resource-storage relationship are handled by a type of object called an
-**Adapter**.
-
-<!-- Add example of an Adapter from the demo app. -->
 
 In addition to a View (+ Template), a Route also links to a type of object
 called a **Controller**. The purpose of a Controller was to house all of the
@@ -310,38 +344,6 @@ the Route). A Controller would also house any additional helper properties or
 methods related to data manipulation.
 
 <!-- Add example of a Controller from the demo app. -->
-
-### Ember 2.0
-
-All of the above was true for Ember v1. **_However, with Ember v2, a major
-change began_** - specifically, a move was made to replace Controllers and Views
-as the abstractions for a particular UI element with a more flexible type of
-object called a **Component**. Like Views, Components have Templates associated
-with them, and they hold properties and methods related to the operation of that
-UI element; these Templates are stored in a different location than normal
-Templates.
-
-<!-- Add example of a Component from the demo app. -->
-
-A Component can be invoked from within a Template (either a normal one or
-another Component's Template), and unlike a View, it does not have access to the
-entire scope of the Route; instead its scope is _explicitly defined_ at the
-location where the Component is invoked. This has the advantage of making
-Components very modular (and consequently, more interchangeable and re-usable).
-
-The change-over from Controllers and Views to Components is in process but is
-not complete. Both Controllers and Views are deprecated, but _Components are not
-yet 'routable'_ (though that change will probably be coming soon). The
-work-around is straight-forward:
-
-1.  Represent all your UI elements with a Component.
-1.  **If your view state needs a Route associated with it**, load it in a
-    normally-named template. You should **not** need to generate a View or
-    Controller, since your code will either go in a Route or the Component
-    itself.
-
-This newer structure is now [much
-simpler](https://guides.emberjs.com/v2.4.0/getting-started/core-concepts/).
 
 ## Code-Along: Start an Application with Generators
 
