@@ -237,7 +237,7 @@ yourself losing sight of the big picture.
 The key parts of an Ember application are:
 
 -   The Ember Router (`Ember.Router`)
--   Routes (`Ember.Route`
+-   Routes (`Ember.Route`)
 -   Templates
 -   Models (`DS.Model`)
 -   Components (`Ember.Component`)
@@ -311,10 +311,10 @@ entire scope of the Route; instead its scope is _explicitly defined_ at the
 location where the Component is invoked. This has the advantage of making
 Components very modular (and consequently, more interchangeable and re-usable).
 
-The change-over from Controllers and Views (Ember 1.0) to Components (Ember 2.0)
+The changeover from Controllers and Views (Ember 1.0) to Components (Ember 2.0)
  is in process but is not complete. Both Controllers and Views are deprecated,
  but _Components are not yet 'routable'_ (though that change will probably be
- coming soon). The work-around is straight-forward:
+ coming soon). The work-around is straightforward:
 
 1.  Represent all your UI elements with a Component.
 1.  **If your view state needs a Route associated with it**, load it in a
