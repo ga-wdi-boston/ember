@@ -10,16 +10,15 @@ of the four most prominent (the others being **Angular**, **Backbone**, and
 ## Prerequisites
 
 -   [ga-wdi-boston/handlebars](https://github.com/ga-wdi-boston/handlebars)
+-   [ga-wdi-boston/ember-study](https://github.com/ga-wdi-boston/ember-study)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
 -   Explain what Ember is and what kinds of applications it's used for.
--   Download and install `ember-cli` and its dependencies.
 -   Create new applications with [ga-wdi-boston/ember-template](https://github.com/ga-wdi-boston/ember-template).
 -   Name and describe the different layers of an Ember application.
--   Contrast the layers of Ember 1 and Ember 2 applications.
 
 ## Preparation
 
@@ -87,79 +86,16 @@ however, binding is one of the most complex topics in Ember, and we won't be
 diving into it too deeply this week. That said, we absolutely welcome you to
 explore this topic on your own time.
 
-## Install `ember-cli` and Dependencies
+## NOTE: Install `ember-cli` and Dependencies
 
-To begin building applications in Ember, you'll need to do a little setup first.
-
-`ember-cli` is a tool that will serve much the same purpose as `rails` did with
-Rails and `express` did with Express - spinning up new applications, generating
-files, running scripts, and performing tests. Install it by running
-
-```sh
-npm install -g ember-cli
-```
-
-We also need `bower`. If you aren't sure whether it's installed, or to update:
-
-```sh
-npm install -g bower
-```
-
-`watchman` is a tool for watching files and recording when they change, allowing
-your Ember app to be updated _as you edit it_. We'll use Homebrew to download
-it:
-
-```bash
-brew update && brew install watchman
-```
-
-Linux users will unfortunately need to download and install `watchman` from the
-source code. Directions for that can be found [in the Watchman
-docs](https://facebook.github.io/watchman/docs/install.html#installing-from-source).
-
-To verify that everything is working, run the command `ember -v`. You should see
-a response more or less like this.
-
-```bash
-version: 2.10.0
-node: 4.6.0
-os: darwin x64
-```
-
-### Gotchas
-
-> Note, there exists a similarly named npm package (watchman) which is not the
-> intended installation. If you have this package installed you may see the
-> following warning:
->
-> ```bash
-> invalid watchman found, version: [2.9.8] did not satisfy [^3.0.0], falling back to NodeWatcher
-> ```
->
->  — <http://ember-cli.com/user-guide/#watchman>
-
-> Lastly, when Watchman is not installed, a notice is displayed when invoking
-> various commands. You can safely ignore this message:
->
-> ```bash
-> Could not find watchman, falling back to NodeWatcher for file system events
-> ```
->
->  — <http://ember-cli.com/user-guide/#watchman>
-
-####Linux
-You may receive `watchman` errors if your Ember applications become large
-enough. This will happen sooner on OS X than on linux. It's a great idea to go
-ahead and take care of this. See [Linux inotify
-limits](https://facebook.github.io/watchman/docs/install.html#linux-inotify-limits).
-See [this doc from
-guard](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers).
+You should've already installed `ember-cli`, `bower`, and
+`watchman` from the `ember-study`. If you haven't, please do so.
 
 ## Starting a New Ember Application
 
-We won't be using `ember new` to generate new Ember applications. We have
-several custom configurations and tasks available in [ga-wdi-boston/ember-template](https://github.com/ga-wdi-boston/ember-template),
-so you'll follow the installation instructions there to start new applications.
+Similarly to `rails`, you can type `ember new` to generate new
+Ember applications. However, just like `rails`, we have
+several custom configurations and tasks available in [ga-wdi-boston/ember-template](https://github.com/ga-wdi-boston/ember-template), so you'll follow the installation instructions there to start new applications.
 
 A new, up-to-date Ember application has been provided for you in this
 repository.
@@ -332,57 +268,7 @@ that resource-storage relationship are handled by a type of object called an
 
 ### Ember 1.0
 
-In the first version of Ember, Ember was built on an MVC structure. It is
-important to understand prior Ember conventions since some documentation and
-tutorials you find will use the older structure.
-
-The key pieces of the older structure were:
-
--   Views (`Ember.View`)
--   Templates
--   The Ember Router (`Ember.Router`)
--   Routes (`Ember.Route`)
--   Models (`DS.Model`)
--   Adapters (`DS.RESTAdapter`)
--   Controllers (`Ember.Controller`)
-
-Each of these parts had a different responsibility. **Views** were the heart of
-Ember's core functionality; each View represented a visible UI element in the
-page, and contained properties and methods (including event handlers) that
-related to how that UI element looked and behaved.
-
-<!-- Add example of a View from the demo app. -->
-
-Views could be nested inside each other, in a tree-like structure.
-
-<!-- Add diagram of nested Views on the page mapping to a text tree of View
-names. -->
-
-The HTML content for a View was provided by a corresponding **Template**. Each
-Template was written in Handlebars, and could access and manipulate properties
-in the View. In-built Handlebars helpers such as `{{#if}}` and `{{#each}}` were
-also available.
-
-
-In addition to a View (+ Template), a Route also links to a type of object
-called a **Controller**. The purpose of a Controller was to house all of the
-'business logic' of our UI element - basically, any sort of CRUD actions that
-the UI element would need to perform on its data (which, again, was provided by
-the Route). A Controller would also house any additional helper properties or
-methods related to data manipulation.
-
-## Code-Along: Start an Application with Generators
-
-We'll be working with a list-making app, Listr, throughout our journey with
-Ember. We have a client [client](https://github.com/ga-wdi-boston/listr-client)
-and [api](https://github.com/ga-wdi-boston/listr-api) for demostration purposes.
-
-Let's try using a few generators and a little custom code to begin building our
-own versions of Listr.
-
-```bash
-ember generate route lists
-```
+Make sure you use docs for Ember 2.0+. If it says Ember 1.x, you're probably in the wrong place.
 
 ## Additional Resources
 
