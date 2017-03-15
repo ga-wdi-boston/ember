@@ -89,7 +89,7 @@ explore this topic on your own time.
 ## NOTE: Install `ember-cli` and Dependencies
 
 You should've already installed `ember-cli`, `bower`, and
-`watchman` from the `ember-study`. If you haven't, please do so.
+`watchman` from the [ember-study](https://github.com/ga-wdi-boston/ember-study). If you haven't, please do so.
 
 ## Starting a New Ember Application
 
