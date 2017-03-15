@@ -146,7 +146,7 @@ An abbreviated version:
 
 Match the generated structure to the description of the layers found in the
 [overview](http://ember-cli.com/user-guide/#folder-layout) and [resolver
-documentation](http://ember-cli.com/user-guide/#using-modules).
+documentation](https://ember-cli.com/user-guide/#module-directory-naming-structure).
 
 1.  In which folder will mainly you be working?
 1.  Where is the default HTML layout defined?
